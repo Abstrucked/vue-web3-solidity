@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "entries": [
+            {
+                "name": "Home",
+                "path": "/"
+            },
+            {
+                "name": "About",
+                "path": "/"
+            }
+        ]
+    }
+}
