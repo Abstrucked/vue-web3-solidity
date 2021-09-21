@@ -1,20 +1,27 @@
 <template>
     <div id="home">
-        <Header></Header>
-        <h1>THIS</h1>
+        <Menu></Menu>
+        <h1>HOME</h1>
+        <b-button tag="button" class="button is-primary" v-on:click="status">Get Contract</b-button>
     </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import Menu from '../components/Menu.vue'
+import {getContract} from '../utils/store.js'
 export default {
     name: 'home',
     components: {
-        Header
+        Menu
     },
     data () {
         return {
 
+        }
+    },
+    methods: {
+        status () {
+            getContract()
         }
     }
 }

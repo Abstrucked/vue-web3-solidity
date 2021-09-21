@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 import * as Web3 from 'web3'
-// import * as contractJSON from '../build/contracts/StepByStep.json'
+import * as contractJSON from '../../build/contracts/MyStatus.json'
 
 const state = Vue.observable({ account: '', balance: 0 })
 
@@ -44,36 +44,32 @@ export const checkAndGo = async () => {
     }
   }
 }
+const networks = {
+  dev: {
+    httpProvider: 'http://localhost:7545'
 
-// export const getContract = async () => {
-//   let web3 = ''
-//   if (typeof web3 !== 'undefined') {
-//     web3 = await new Web3(window.ethereum)
-//     console.log('val', web3)
-//   } else {
-//     // set the provider you want from Web3.providers
-//     web3 = await new Web3(new Web3.providers.HttpProvider(networks.dev.httpProvider))
-//     console.log('null', web3)
-//   }
-//   const accounts = await web3.eth.getAccounts()
-//   web3.eth.defaultAccount = accounts[0]
-//   const account = accounts[0]
-//   console.log(account)
-//   const sbs = new web3.eth.Contract(contractJSON.abi, '0xA3d6D860F6A3D76D1cDB58aD5F5afe8813781F10', {
-//     from: account,
-//     gasLimit: web3.utils.toHex(7900000),
-//     gasPrice: web3.utils.toHex(1000000000)
-//   })
-//   console.log(sbs)
-//   await sbs.methods.claim().send({from: accounts[0]})
-// }
-
-// const networks = {
-//   dev: {
-//     httpProvider: 'http://localhost:7545'
-
-//   },
-//   default: this.httpProvider
-// }
+  }
+  
+}
+export const getContract = async () => {
+  let web3 = ''
+  if (typeof web3 !== 'undefined') {
+    web3 = await new Web3(window.ethereum)
+  } else {
+    // set the provider you want from Web3.providers
+    web3 = await new Web3(new Web3.providers.HttpProvider(networks.dev.httpProvider))
+    console.log('null', web3)
+  }
+  const accounts = await web3.eth.getAccounts()
+  web3.eth.defaultAccount = accounts[0]
+  const account = accounts[0]
+  console.log(contractJSON.abi);
+  const sbs = new web3.eth.Contract(contractJSON.abi, '0xCe4942A9C96a3Ea96e3D9d6863a605B009567f1b')
+  sbs.methods.getStatus().call({
+    from: account,
+    gas: 1000000,
+    value: 1
+  })
+}
 
 export default state

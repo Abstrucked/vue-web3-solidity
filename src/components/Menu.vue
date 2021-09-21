@@ -1,10 +1,10 @@
 <template>
-    <b-navbar id="header">
+    <b-navbar id="navApp">
         <template #brand>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
-                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
+                    src=""
+                    alt=""
                 >
             </b-navbar-item>
         </template>
@@ -14,8 +14,8 @@
                     {{route.name}}
                 </b-navbar-item>
             </div> -->
-                <b-navbar-item v-for="route in loadedRoutes" v-bind:key="route" tag="router-link" :to="{ path: route.path }">
-                    {{route.name}}
+                <b-navbar-item v-for="item in menu" v-bind:key="item.name">
+                    <a tag="router-link" :to="{ path: item.path }">{{item.name}}</a>
                 </b-navbar-item>
         </template>
 
@@ -31,19 +31,22 @@
 
 <script>
 import WalletConnect from './WalletConnect.vue'
-import {routes} from '../router'
+
 export default {
-    name: 'header',
+    name: 'navApp',
+    components: { WalletConnect },
     data () {
         return {
-            
-        }
-    },
-    components: { WalletConnect },
-    computed: {
-        loadedRoutes () {
-            console.log(routes)
-            return routes
+            menu: [
+                {
+                    name: 'Home',
+                    path: '/'
+                },
+                {
+                    name: 'About',
+                    path: '/about'
+                }
+            ]
         }
     },
     methods: {
