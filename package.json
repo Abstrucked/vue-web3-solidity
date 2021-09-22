@@ -22,7 +22,6 @@
   "dependencies": {
     "buefy": "^0.9.10",
     "core-js": "^3.17.3",
-    "solc": "^0.8.7-fixed",
     "vue": "^2.6.14",
     "vue-router": "^3.5.2",
     "web3": "^1.5.2"

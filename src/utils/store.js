@@ -2,7 +2,6 @@
 import Vue from 'vue'
 import * as Web3 from 'web3'
 import * as contractJSON from '../../build/contracts/MyStatus.json'
-
 const state = Vue.observable({ account: '', balance: 0 })
 
 export const _connect = async () => {
@@ -47,10 +46,9 @@ export const checkAndGo = async () => {
 const networks = {
   dev: {
     httpProvider: 'http://localhost:7545'
-
   }
-  
 }
+
 export const getContract = async () => {
   let web3 = ''
   if (typeof web3 !== 'undefined') {
@@ -62,14 +60,13 @@ export const getContract = async () => {
   }
   const accounts = await web3.eth.getAccounts()
   web3.eth.defaultAccount = accounts[0]
-  const account = accounts[0]
-  console.log(contractJSON.abi);
-  const sbs = new web3.eth.Contract(contractJSON.abi, '0xCe4942A9C96a3Ea96e3D9d6863a605B009567f1b')
-  sbs.methods.getStatus().call({
-    from: account,
-    gas: 1000000,
-    value: 1
+  // const account = accounts[0]
+  const abi = contractJSON.abi
+  const sbs = new web3.eth.Contract(abi, '0xF01F02021addd12bD1b16Fbe383574C837852309')
+  const x = await sbs.methods.getStatus().call((err,result) => {
+    console.log(result);
   })
+  console.log(x)
 }
 
 export default state
