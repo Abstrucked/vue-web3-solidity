@@ -2,7 +2,7 @@
     <div id="home">
         <Menu></Menu>
         <h1>HOME</h1>
-        <b-button tag="button" class="button is-primary" v-on:click="status">Get Contract</b-button>
+        <b-button tag="button" class="button is-primary" v-on:click="status()">Get Contract</b-button>
     </div>
 </template>
 

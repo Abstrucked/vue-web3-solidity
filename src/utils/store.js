@@ -62,10 +62,8 @@ export const getContract = async () => {
   web3.eth.defaultAccount = accounts[0]
   // const account = accounts[0]
   const abi = contractJSON.abi
-  const sbs = new web3.eth.Contract(abi, '0xF01F02021addd12bD1b16Fbe383574C837852309')
-  const x = await sbs.methods.getStatus().call((err,result) => {
-    console.log(result);
-  })
+  const sbs = new web3.eth.Contract(abi, '0x7603fb4338400652d79ABE80DB5a92dd58d13Be3')
+  const x = await sbs.methods.getStatus().call()
   console.log(x)
 }
 
