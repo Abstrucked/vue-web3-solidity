@@ -20,7 +20,7 @@ A ready-to-go dapp-template built on solidity, vue and web3
     * run: `npm install`
   * with yarn
     * run: `yarn install`
-3. ### Getting the eviroment started
+3. ### Getting the environment started
   * Ganache
     * open `ganache`, start a new "Ethereum enviroment" and save it.
   * Metamask
