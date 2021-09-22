@@ -9,14 +9,15 @@
             </b-navbar-item>
         </template>
         <template #start>
-            <!-- <div v-for="route in loadedRoutes" v-bind:key="route">
-                <b-navbar-item tag="router-link" :to="{ path: route.path }">
-                    {{route.name}}
-                </b-navbar-item>
-            </div> -->
-                <b-navbar-item v-for="item in menu" v-bind:key="item.name">
-                    <a tag="router-link" :to="{ path: item.path }">{{item.name}}</a>
-                </b-navbar-item>
+          <div 
+          v-for="item in menu" 
+          v-bind:key="item"
+          class="navbar-item"
+          >
+            <router-link
+              :to="item.path" 
+            >{{item.name}}</router-link>
+          </div>
         </template>
 
         <template #end>

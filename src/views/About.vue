@@ -1,17 +1,17 @@
 <template>
 	<div>
-		<!-- <Header></Header> -->
+		<Menu></Menu>
 		<h1>ABOUT PAGE</h1>
-    <Footer></Footer>
+    <ThisFooter></ThisFooter>
 	</div>
   
 </template>
 
 <script>
-  // import Header from '@/components/Header.vue'
-  // import Footer from '@/components/Footer'
+  import Menu from '@/components/Menu.vue'
+  import ThisFooter from '@/components/Footer'
 
   export default {
-		// components: { Header, Footer }
+		components: { Menu, ThisFooter }
 	}
 </script>
