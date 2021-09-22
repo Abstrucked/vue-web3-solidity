@@ -11,7 +11,7 @@
         <template #start>
           <div 
           v-for="item in menu" 
-          v-bind:key="item"
+          v-bind:key="item.name"
           class="navbar-item"
           >
             <router-link
