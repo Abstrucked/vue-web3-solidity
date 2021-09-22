@@ -1,4 +1,5 @@
 .env
+git
 .git/
 node_modules/
 
