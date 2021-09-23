@@ -1,4 +1,4 @@
-# vue-web3
+# vue-web3-solidity
 A ready-to-go dapp-template built on solidity, vue and web3
 
 ## Pre Installation
