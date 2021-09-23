@@ -1,24 +1,21 @@
 {
-  "name": "atomic-decentralized-3dverse",
+  "name": "vue-web3-solidity",
   "version": "1.0.0",
-  "description": "Decentralized 3D Universe composed of interconnected worlds",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-smart-contracts": "truffle test",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "keywords": [
-    "metaverse",
     "solidity",
     "web3",
-    "vue",
-    "3D",
-    "virtualwolrds"
+    "vue"
   ],
   "author": "abstrucked",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "buefy": "^0.9.10",
     "core-js": "^3.17.3",
