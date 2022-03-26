@@ -1,0 +1,205 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "MyStatus": {
+        "src": "contracts/MyStatus.sol:3",
+        "version": {
+          "withMetadata": "be48acf883303a0650df0d7e6575021a4716f9141dbcf1db2974b2657eb68262",
+          "withoutMetadata": "06e8b657da1521ec281f047ffb82c8fe4e7e9b7cdcef48d3df11055e301695f8",
+          "linkedWithoutMetadata": "06e8b657da1521ec281f047ffb82c8fe4e7e9b7cdcef48d3df11055e301695f8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "getStatus()",
+          "setStatus(string)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MyStatus",
+            "src": "contracts/MyStatus.sol:6"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "status",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_string_storage",
+              "contract": "MyStatus",
+              "src": "contracts/MyStatus.sol:4"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "Migrations": {
+        "src": "contracts/Migrations.sol:4",
+        "version": {
+          "withMetadata": "d45eef4c2e48d5c03a8e298e86855aa46416c8184a1ea94bfb4f736b164d7484",
+          "withoutMetadata": "9952abda1c4c72c7e5b12c7c801b4bab1b5e487adaacd956c8ac5c96f8d2c5a6",
+          "linkedWithoutMetadata": "9952abda1c4c72c7e5b12c7c801b4bab1b5e487adaacd956c8ac5c96f8d2c5a6"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "setCompleted(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "owner",
+            "src": "contracts/Migrations.sol:5"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Migrations",
+              "src": "contracts/Migrations.sol:5"
+            },
+            {
+              "label": "last_completed_migration",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Migrations",
+              "src": "contracts/Migrations.sol:6"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "MyStatus": {
+        "src": "contracts/MyStatus.sol:3",
+        "version": {
+          "withMetadata": "14d562f804eec93bc71f2d3535a045ae82d6bce01d83bd5c3313bba2354e6ad2",
+          "withoutMetadata": "e87ff1cbc2dfb55d98851efde6ac7e34ff31ac4986cc720406c0fa806295dbe4",
+          "linkedWithoutMetadata": "e87ff1cbc2dfb55d98851efde6ac7e34ff31ac4986cc720406c0fa806295dbe4"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "getStatus()",
+          "setStatus(string)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MyStatus",
+            "src": "contracts/MyStatus.sol:6"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "status",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_string_storage",
+              "contract": "MyStatus",
+              "src": "contracts/MyStatus.sol:4"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "Migrations": {
+        "src": "contracts/Migrations.sol:4",
+        "version": {
+          "withMetadata": "d45eef4c2e48d5c03a8e298e86855aa46416c8184a1ea94bfb4f736b164d7484",
+          "withoutMetadata": "9952abda1c4c72c7e5b12c7c801b4bab1b5e487adaacd956c8ac5c96f8d2c5a6",
+          "linkedWithoutMetadata": "9952abda1c4c72c7e5b12c7c801b4bab1b5e487adaacd956c8ac5c96f8d2c5a6"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "setCompleted(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "owner",
+            "src": "contracts/Migrations.sol:5"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Migrations",
+              "src": "contracts/Migrations.sol:5"
+            },
+            {
+              "label": "last_completed_migration",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Migrations",
+              "src": "contracts/Migrations.sol:6"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    }
+  ]
+}

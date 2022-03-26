@@ -2,7 +2,7 @@ pragma solidity >= 0.5.0 <= 0.9.0;
 
 contract MyStatus {
     string status;
-
+    event newStatus(string status );
     constructor() public {
         status = "busy";
     }
@@ -13,5 +13,6 @@ contract MyStatus {
 
     function setStatus(string calldata _status) external {
         status = _status;
+        emit newStatus(status);
     }
 }
